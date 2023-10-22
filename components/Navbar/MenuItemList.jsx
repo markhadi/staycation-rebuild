@@ -1,11 +1,18 @@
 import Link from "next/link";
 
-const MenuItemList = ({ menuRef, isMenuOpen, items, currentPath }) => {
+const MenuItemList = ({
+  menuRef,
+  isMenuOpen,
+  items,
+  currentPath,
+  closeMenu,
+}) => {
   return (
     <ul ref={menuRef} className={`menu ${isMenuOpen ? "showMenu" : ""}`}>
       {items.map((item, index) => (
         <li key={index}>
           <Link
+            onClick={closeMenu}
             href={item.link}
             className={`${
               currentPath === item.link ? "text-blue-500" : "text-blue-900"

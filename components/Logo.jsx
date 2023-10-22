@@ -4,7 +4,7 @@ const Logo = () => {
   return (
     <Link
       href={"/"}
-      className="text-blue-500 font-medium text-[26px] leading-normal w-max self-center md:self-start"
+      className="text-blue-500 font-medium text-2xl w-max self-center md:self-start"
     >
       Stay<span className="text-blue-900">cation.</span>
     </Link>

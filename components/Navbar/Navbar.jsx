@@ -35,9 +35,13 @@ const Navbar = () => {
     }
   });
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="flex place-content-center border-b border-gray-200">
-      <div className="flex w-full max-w-1140 items-center justify-between py-5 px-6 md:px-0">
+      <section className="flex w-full max-w-1140 items-center justify-between py-5 px-6 md:px-0">
         <Logo />
 
         <MenuIcon isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
@@ -47,8 +51,9 @@ const Navbar = () => {
           isMenuOpen={isMenuOpen}
           items={menuItems}
           currentPath={pathname}
+          closeMenu={closeMenu}
         />
-      </div>
+      </section>
     </nav>
   );
 };
